@@ -1,0 +1,298 @@
+
+
+
+#kc_logo{
+    max-height:110px;
+    position:absolute;
+    top:-1px;
+    left:5px;
+}
+
+#logo_text{
+    position:absolute;
+    top:15px;
+    left:125px;
+    font-size: 1.5em;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+
+.collapse.navbar-collapse.navbar-right li> #about{
+    color:white;
+}
+
+.collapse.navbar-collapse.navbar-right > li:hover{
+    color:red;
+}
+
+
+
+
+
+
+
+/*
+.nav.navbar-nav#about:hover  div{
+    color:white !important; 
+
+}
+*/
+.dropdown li:hover > a{
+    color:red !important;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+#myCarousel{
+    color:white;
+    margin-top:150px;
+    margin-bottom:150px;
+    background-color: rgba(30,30,30,.8);
+    max-height:1000px;
+    
+}
+
+carousel-inner{
+    margin:auto;
+}
+
+#myCarousel a.carousel-control{
+    color:white;
+    position:absolute;
+    top:200px;
+}
+#property_details td{
+    padding:10px;
+}
+.item.row form{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%;
+    margin-bottom:10%;
+    width:50%;
+    overflow:auto;
+}
+
+
+#myCarousel#permits a{
+    color:white !important;
+}
+
+#myCarousel legend{
+    text-align: left !important;
+    color:white;
+}
+
+.radio label{
+    margin:15px;
+}
+
+#summary_table{
+    padding:10px;
+    background-color: rgba(10,10,10,.9);
+}
+
+#summary_table table{
+    border:2px solid white;
+    font-weight: bold;
+    overflow: auto;
+}
+
+#summary_table th{
+    background-color: black;
+    color:white;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+#summary_table tr{
+    background-color: lightgray;
+}
+
+#summary_table tr:hover{
+    background-color: white;
+}
+
+#summary_table td{
+    color:black;
+}
+
+#summary_table tr td:first-of-type{
+    color:red;
+}
+
+#form_submit{
+    background-color: green;
+    color:white;
+    margin-top:15px;
+    border:2px solid white;
+}
+
+#form_submit:hover{
+    background-color: white;
+    color:green;
+    border: 2px solid green;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    background-color: #000;
+    font-size: 14px;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+/*
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}*/
+
+@media(min-width:768px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+/*
+a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #1d9b6c;
+}
+*/
+
+.navbar-custom {
+    margin-bottom: 0;
+    border:2px solid black;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+/*
+.navbar-custom a {
+    color: #fff;
+}*/
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+/*
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}*/
+/*
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}*/
+/*
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+*/
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    color: #fff;
+    background: url(../img/kc5.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+@media(min-width:767px) {
+    .content-section {
+        padding-top: 250px;
+    }
+
+    .download-section {
+        padding: 100px 0;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
+
+
+
+/*
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}*/
