@@ -1,0 +1,124 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "project",
+      "otherEntityName": "project",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "contractor"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "user",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "businessName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "businessLicenseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "streetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "zipCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "agentFirstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "agentMiddleInitial",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "agentLastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "agentJobTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 13,
+      "fieldName": "agentPhoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 14,
+      "fieldName": "contractLicenseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 15,
+      "fieldName": "occupationalLicenseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 16,
+      "fieldName": "masterPlumberLicenseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 17,
+      "fieldName": "hasGeneralLiabilityCoverage",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 18,
+      "fieldName": "requirementsMet",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 19,
+      "fieldName": "carrier",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 20,
+      "fieldName": "policyNumber",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160605155608",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

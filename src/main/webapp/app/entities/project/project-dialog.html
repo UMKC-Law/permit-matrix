@@ -1,0 +1,321 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectLabel">Create or edit a Project</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.project.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.project.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_projectName">Project Name</label>
+            <input type="text" class="form-control" name="projectName" id="field_projectName"
+                    ng-model="vm.project.projectName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_projectDescription">Project Description</label>
+            <input type="text" class="form-control" name="projectDescription" id="field_projectDescription"
+                    ng-model="vm.project.projectDescription"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_projectStatus">Project Status</label>
+            <select class="form-control" name="projectStatus" ng-model="vm.project.projectStatus" id="field_projectStatus">
+                <option value="INCOMPLETE">INCOMPLETE</option>
+                <option value="READY">READY</option>
+                <option value="SUBMITTED">SUBMITTED</option>
+                <option value="APPROVED">APPROVED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_addedDate">Added Date</label>
+                <div class="input-group">
+                    <input id="field_addedDate" type="text" class="form-control" name="addedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.addedDate" is-open="vm.datePickerOpenStatus.addedDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('addedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_submittedDate">Submitted Date</label>
+                <div class="input-group">
+                    <input id="field_submittedDate" type="text" class="form-control" name="submittedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.submittedDate" is-open="vm.datePickerOpenStatus.submittedDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('submittedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_approvedDate">Approved Date</label>
+                <div class="input-group">
+                    <input id="field_approvedDate" type="text" class="form-control" name="approvedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.approvedDate" is-open="vm.datePickerOpenStatus.approvedDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('approvedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isWorkOnExistingPlumbing">Is Work On Existing Plumbing</label>
+            <input type="checkbox" class="form-control" name="isWorkOnExistingPlumbing" id="field_isWorkOnExistingPlumbing"
+                    ng-model="vm.project.isWorkOnExistingPlumbing"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_repairLocation">Repair Location</label>
+            <select class="form-control" name="repairLocation" ng-model="vm.project.repairLocation" id="field_repairLocation">
+                <option value="CURB_BOX" translate="permitmeApp.RepairLocation.CURB_BOX">CURB_BOX</option>
+                <option value="METER_TILE" translate="permitmeApp.RepairLocation.METER_TILE">METER_TILE</option>
+                <option value="YARD">YARD</option>
+                <option value="INSIDE">INSIDE</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_customRepairLocation">Custom Repair Location</label>
+            <input type="text" class="form-control" name="customRepairLocation" id="field_customRepairLocation"
+                    ng-model="vm.project.customRepairLocation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_meterLocation">Meter Location</label>
+            <select class="form-control" name="meterLocation" ng-model="vm.project.meterLocation" id="field_meterLocation">
+                <option value="INSIDE">INSIDE</option>
+                <option value="OUTSIDE">OUTSIDE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isNewLine">Is New Line</label>
+            <input type="checkbox" class="form-control" name="isNewLine" id="field_isNewLine"
+                    ng-model="vm.project.isNewLine"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_plumbingType">Plumbing Type</label>
+            <select class="form-control" name="plumbingType" ng-model="vm.project.plumbingType" id="field_plumbingType">
+                <option value="WATER">WATER</option>
+                <option value="TAP">TAP</option>
+                <option value="SANITARY_SEWER" translate="permitmeApp.PlumbingType.SANITARY_SEWER">SANITARY_SEWER</option>
+                <option value="STORM_CONNECTION" translate="permitmeApp.PlumbingType.STORM_CONNECTION">STORM_CONNECTION</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_customPlumbingType">Custom Plumbing Type</label>
+            <input type="text" class="form-control" name="customPlumbingType" id="field_customPlumbingType"
+                    ng-model="vm.project.customPlumbingType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isConnectionAvailableFromProperty">Is Connection Available From Property</label>
+            <input type="checkbox" class="form-control" name="isConnectionAvailableFromProperty" id="field_isConnectionAvailableFromProperty"
+                    ng-model="vm.project.isConnectionAvailableFromProperty"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isConnectionReadyForHookup">Is Connection Ready For Hookup</label>
+            <input type="checkbox" class="form-control" name="isConnectionReadyForHookup" id="field_isConnectionReadyForHookup"
+                    ng-model="vm.project.isConnectionReadyForHookup"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_hasMasterSewerApprovalLetter">Has Master Sewer Approval Letter</label>
+            <input type="checkbox" class="form-control" name="hasMasterSewerApprovalLetter" id="field_hasMasterSewerApprovalLetter"
+                    ng-model="vm.project.hasMasterSewerApprovalLetter"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_platSubdivision">Plat Subdivision</label>
+            <input type="text" class="form-control" name="platSubdivision" id="field_platSubdivision"
+                    ng-model="vm.project.platSubdivision"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_hasAssessmentOrLien">Has Assessment Or Lien</label>
+            <input type="checkbox" class="form-control" name="hasAssessmentOrLien" id="field_hasAssessmentOrLien"
+                    ng-model="vm.project.hasAssessmentOrLien"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isAssessmentOrLienPaid">Is Assessment Or Lien Paid</label>
+            <input type="checkbox" class="form-control" name="isAssessmentOrLienPaid" id="field_isAssessmentOrLienPaid"
+                    ng-model="vm.project.isAssessmentOrLienPaid"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_workSiteType">Work Site Type</label>
+            <select class="form-control" name="workSiteType" ng-model="vm.project.workSiteType" id="field_workSiteType">
+                <option value="PUBLIC">PUBLIC</option>
+                <option value="PRIVATE">PRIVATE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_streetAddress">Street Address</label>
+            <input type="text" class="form-control" name="streetAddress" id="field_streetAddress"
+                    ng-model="vm.project.streetAddress"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.project.zipCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.project.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.project.state"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_includesExcavation">Includes Excavation</label>
+            <input type="checkbox" class="form-control" name="includesExcavation" id="field_includesExcavation"
+                    ng-model="vm.project.includesExcavation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_excavationDescription">Excavation Description</label>
+            <input type="text" class="form-control" name="excavationDescription" id="field_excavationDescription"
+                    ng-model="vm.project.excavationDescription"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_excavationPermitNumber">Excavation Permit Number</label>
+            <input type="text" class="form-control" name="excavationPermitNumber" id="field_excavationPermitNumber"
+                    ng-model="vm.project.excavationPermitNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isNewConstruction">Is New Construction</label>
+            <input type="checkbox" class="form-control" name="isNewConstruction" id="field_isNewConstruction"
+                    ng-model="vm.project.isNewConstruction"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_newConstructionBuildingPermitNumber">New Construction Building Permit Number</label>
+            <input type="text" class="form-control" name="newConstructionBuildingPermitNumber" id="field_newConstructionBuildingPermitNumber"
+                    ng-model="vm.project.newConstructionBuildingPermitNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zoningDistrict">Zoning District</label>
+            <input type="text" class="form-control" name="zoningDistrict" id="field_zoningDistrict"
+                    ng-model="vm.project.zoningDistrict"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_occGroup">Occ Group</label>
+            <input type="text" class="form-control" name="occGroup" id="field_occGroup"
+                    ng-model="vm.project.occGroup"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_constructionType">Construction Type</label>
+            <input type="text" class="form-control" name="constructionType" id="field_constructionType"
+                    ng-model="vm.project.constructionType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_structuralClass">Structural Class</label>
+            <input type="text" class="form-control" name="structuralClass" id="field_structuralClass"
+                    ng-model="vm.project.structuralClass"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_hasSitePlan">Has Site Plan</label>
+            <input type="checkbox" class="form-control" name="hasSitePlan" id="field_hasSitePlan"
+                    ng-model="vm.project.hasSitePlan"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_controlNumber">Control Number</label>
+            <input type="text" class="form-control" name="controlNumber" id="field_controlNumber"
+                    ng-model="vm.project.controlNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_totalFloors">Total Floors</label>
+            <input type="number" class="form-control" name="totalFloors" id="field_totalFloors"
+                    ng-model="vm.project.totalFloors"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_grossBuildingArea">Gross Building Area</label>
+            <input type="number" class="form-control" name="grossBuildingArea" id="field_grossBuildingArea"
+                    ng-model="vm.project.grossBuildingArea"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_totalDwellingUnits">Total Dwelling Units</label>
+            <input type="number" class="form-control" name="totalDwellingUnits" id="field_totalDwellingUnits"
+                    ng-model="vm.project.totalDwellingUnits"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_serviceLineLocation">Service Line Location</label>
+            <input type="text" class="form-control" name="serviceLineLocation" id="field_serviceLineLocation"
+                    ng-model="vm.project.serviceLineLocation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_existingSewerMaterialDescription">Existing Sewer Material Description</label>
+            <input type="text" class="form-control" name="existingSewerMaterialDescription" id="field_existingSewerMaterialDescription"
+                    ng-model="vm.project.existingSewerMaterialDescription"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_connectionType">Connection Type</label>
+            <input type="text" class="form-control" name="connectionType" id="field_connectionType"
+                    ng-model="vm.project.connectionType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_serviceLineSize">Service Line Size</label>
+            <input type="text" class="form-control" name="serviceLineSize" id="field_serviceLineSize"
+                    ng-model="vm.project.serviceLineSize"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sewerMainSize">Sewer Main Size</label>
+            <input type="text" class="form-control" name="sewerMainSize" id="field_sewerMainSize"
+                    ng-model="vm.project.sewerMainSize"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_usesRightOfWay">Uses Right Of Way</label>
+            <input type="checkbox" class="form-control" name="usesRightOfWay" id="field_usesRightOfWay"
+                    ng-model="vm.project.usesRightOfWay"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_contractor">Contractor</label>
+            <select class="form-control" id="field_contractor" name="contractor" ng-model="vm.project.contractor" ng-options="contractor as contractor.id for contractor in vm.contractors track by contractor.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

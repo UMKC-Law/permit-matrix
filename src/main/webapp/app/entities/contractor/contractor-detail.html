@@ -1,0 +1,98 @@
+
+<div>
+    <h2><span>Contractor</span> {{vm.contractor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Business Name</span></dt>
+        <dd>
+            <span>{{vm.contractor.businessName}}</span>
+        </dd>
+        <dt><span>Business License Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.businessLicenseNumber}}</span>
+        </dd>
+        <dt><span>Phone Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.phoneNumber}}</span>
+        </dd>
+        <dt><span>Street Address</span></dt>
+        <dd>
+            <span>{{vm.contractor.streetAddress}}</span>
+        </dd>
+        <dt><span>Zip Code</span></dt>
+        <dd>
+            <span>{{vm.contractor.zipCode}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.contractor.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.contractor.state}}</span>
+        </dd>
+        <dt><span>Agent First Name</span></dt>
+        <dd>
+            <span>{{vm.contractor.agentFirstName}}</span>
+        </dd>
+        <dt><span>Agent Middle Initial</span></dt>
+        <dd>
+            <span>{{vm.contractor.agentMiddleInitial}}</span>
+        </dd>
+        <dt><span>Agent Last Name</span></dt>
+        <dd>
+            <span>{{vm.contractor.agentLastName}}</span>
+        </dd>
+        <dt><span>Agent Job Title</span></dt>
+        <dd>
+            <span>{{vm.contractor.agentJobTitle}}</span>
+        </dd>
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{vm.contractor.email}}</span>
+        </dd>
+        <dt><span>Agent Phone Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.agentPhoneNumber}}</span>
+        </dd>
+        <dt><span>Contract License Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.contractLicenseNumber}}</span>
+        </dd>
+        <dt><span>Occupational License Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.occupationalLicenseNumber}}</span>
+        </dd>
+        <dt><span>Master Plumber License Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.masterPlumberLicenseNumber}}</span>
+        </dd>
+        <dt><span>Has General Liability Coverage</span></dt>
+        <dd>
+            <span>{{vm.contractor.hasGeneralLiabilityCoverage}}</span>
+        </dd>
+        <dt><span>Requirements Met</span></dt>
+        <dd>
+            <span>{{vm.contractor.requirementsMet}}</span>
+        </dd>
+        <dt><span>Carrier</span></dt>
+        <dd>
+            <span>{{vm.contractor.carrier}}</span>
+        </dd>
+        <dt><span>Policy Number</span></dt>
+        <dd>
+            <span>{{vm.contractor.policyNumber}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.contractor.user.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

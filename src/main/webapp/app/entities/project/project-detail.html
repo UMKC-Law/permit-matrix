@@ -1,0 +1,194 @@
+
+<div>
+    <h2><span>Project</span> {{vm.project.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Project Name</span></dt>
+        <dd>
+            <span>{{vm.project.projectName}}</span>
+        </dd>
+        <dt><span>Project Description</span></dt>
+        <dd>
+            <span>{{vm.project.projectDescription}}</span>
+        </dd>
+        <dt><span>Project Status</span></dt>
+        <dd>
+            <span translate="{{'permitmeApp.ProjectStatus.' + vm.project.projectStatus}}">{{vm.project.projectStatus}}</span>
+        </dd>
+        <dt><span>Added Date</span></dt>
+        <dd>
+            <span>{{vm.project.addedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Submitted Date</span></dt>
+        <dd>
+            <span>{{vm.project.submittedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Approved Date</span></dt>
+        <dd>
+            <span>{{vm.project.approvedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Is Work On Existing Plumbing</span></dt>
+        <dd>
+            <span>{{vm.project.isWorkOnExistingPlumbing}}</span>
+        </dd>
+        <dt><span>Repair Location</span></dt>
+        <dd>
+            <span translate="{{'permitmeApp.RepairLocation.' + vm.project.repairLocation}}">{{vm.project.repairLocation}}</span>
+        </dd>
+        <dt><span>Custom Repair Location</span></dt>
+        <dd>
+            <span>{{vm.project.customRepairLocation}}</span>
+        </dd>
+        <dt><span>Meter Location</span></dt>
+        <dd>
+            <span translate="{{'permitmeApp.MeterLocation.' + vm.project.meterLocation}}">{{vm.project.meterLocation}}</span>
+        </dd>
+        <dt><span>Is New Line</span></dt>
+        <dd>
+            <span>{{vm.project.isNewLine}}</span>
+        </dd>
+        <dt><span>Plumbing Type</span></dt>
+        <dd>
+            <span translate="{{'permitmeApp.PlumbingType.' + vm.project.plumbingType}}">{{vm.project.plumbingType}}</span>
+        </dd>
+        <dt><span>Custom Plumbing Type</span></dt>
+        <dd>
+            <span>{{vm.project.customPlumbingType}}</span>
+        </dd>
+        <dt><span>Is Connection Available From Property</span></dt>
+        <dd>
+            <span>{{vm.project.isConnectionAvailableFromProperty}}</span>
+        </dd>
+        <dt><span>Is Connection Ready For Hookup</span></dt>
+        <dd>
+            <span>{{vm.project.isConnectionReadyForHookup}}</span>
+        </dd>
+        <dt><span>Has Master Sewer Approval Letter</span></dt>
+        <dd>
+            <span>{{vm.project.hasMasterSewerApprovalLetter}}</span>
+        </dd>
+        <dt><span>Plat Subdivision</span></dt>
+        <dd>
+            <span>{{vm.project.platSubdivision}}</span>
+        </dd>
+        <dt><span>Has Assessment Or Lien</span></dt>
+        <dd>
+            <span>{{vm.project.hasAssessmentOrLien}}</span>
+        </dd>
+        <dt><span>Is Assessment Or Lien Paid</span></dt>
+        <dd>
+            <span>{{vm.project.isAssessmentOrLienPaid}}</span>
+        </dd>
+        <dt><span>Work Site Type</span></dt>
+        <dd>
+            <span translate="{{'permitmeApp.WorkSiteType.' + vm.project.workSiteType}}">{{vm.project.workSiteType}}</span>
+        </dd>
+        <dt><span>Street Address</span></dt>
+        <dd>
+            <span>{{vm.project.streetAddress}}</span>
+        </dd>
+        <dt><span>Zip Code</span></dt>
+        <dd>
+            <span>{{vm.project.zipCode}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.project.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.project.state}}</span>
+        </dd>
+        <dt><span>Includes Excavation</span></dt>
+        <dd>
+            <span>{{vm.project.includesExcavation}}</span>
+        </dd>
+        <dt><span>Excavation Description</span></dt>
+        <dd>
+            <span>{{vm.project.excavationDescription}}</span>
+        </dd>
+        <dt><span>Excavation Permit Number</span></dt>
+        <dd>
+            <span>{{vm.project.excavationPermitNumber}}</span>
+        </dd>
+        <dt><span>Is New Construction</span></dt>
+        <dd>
+            <span>{{vm.project.isNewConstruction}}</span>
+        </dd>
+        <dt><span>New Construction Building Permit Number</span></dt>
+        <dd>
+            <span>{{vm.project.newConstructionBuildingPermitNumber}}</span>
+        </dd>
+        <dt><span>Zoning District</span></dt>
+        <dd>
+            <span>{{vm.project.zoningDistrict}}</span>
+        </dd>
+        <dt><span>Occ Group</span></dt>
+        <dd>
+            <span>{{vm.project.occGroup}}</span>
+        </dd>
+        <dt><span>Construction Type</span></dt>
+        <dd>
+            <span>{{vm.project.constructionType}}</span>
+        </dd>
+        <dt><span>Structural Class</span></dt>
+        <dd>
+            <span>{{vm.project.structuralClass}}</span>
+        </dd>
+        <dt><span>Has Site Plan</span></dt>
+        <dd>
+            <span>{{vm.project.hasSitePlan}}</span>
+        </dd>
+        <dt><span>Control Number</span></dt>
+        <dd>
+            <span>{{vm.project.controlNumber}}</span>
+        </dd>
+        <dt><span>Total Floors</span></dt>
+        <dd>
+            <span>{{vm.project.totalFloors}}</span>
+        </dd>
+        <dt><span>Gross Building Area</span></dt>
+        <dd>
+            <span>{{vm.project.grossBuildingArea}}</span>
+        </dd>
+        <dt><span>Total Dwelling Units</span></dt>
+        <dd>
+            <span>{{vm.project.totalDwellingUnits}}</span>
+        </dd>
+        <dt><span>Service Line Location</span></dt>
+        <dd>
+            <span>{{vm.project.serviceLineLocation}}</span>
+        </dd>
+        <dt><span>Existing Sewer Material Description</span></dt>
+        <dd>
+            <span>{{vm.project.existingSewerMaterialDescription}}</span>
+        </dd>
+        <dt><span>Connection Type</span></dt>
+        <dd>
+            <span>{{vm.project.connectionType}}</span>
+        </dd>
+        <dt><span>Service Line Size</span></dt>
+        <dd>
+            <span>{{vm.project.serviceLineSize}}</span>
+        </dd>
+        <dt><span>Sewer Main Size</span></dt>
+        <dd>
+            <span>{{vm.project.sewerMainSize}}</span>
+        </dd>
+        <dt><span>Uses Right Of Way</span></dt>
+        <dd>
+            <span>{{vm.project.usesRightOfWay}}</span>
+        </dd>
+        <dt><span>Contractor</span></dt>
+        <dd>
+            <a ui-sref="contractor-detail({id:vm.project.contractor.id})">{{vm.project.contractor.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

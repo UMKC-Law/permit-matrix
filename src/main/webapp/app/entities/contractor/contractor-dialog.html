@@ -1,0 +1,152 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myContractorLabel">Create or edit a Contractor</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.contractor.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.contractor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_businessName">Business Name</label>
+            <input type="text" class="form-control" name="businessName" id="field_businessName"
+                    ng-model="vm.contractor.businessName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_businessLicenseNumber">Business License Number</label>
+            <input type="text" class="form-control" name="businessLicenseNumber" id="field_businessLicenseNumber"
+                    ng-model="vm.contractor.businessLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="vm.contractor.phoneNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_streetAddress">Street Address</label>
+            <input type="text" class="form-control" name="streetAddress" id="field_streetAddress"
+                    ng-model="vm.contractor.streetAddress"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.contractor.zipCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.contractor.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.contractor.state"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentFirstName">Agent First Name</label>
+            <input type="text" class="form-control" name="agentFirstName" id="field_agentFirstName"
+                    ng-model="vm.contractor.agentFirstName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentMiddleInitial">Agent Middle Initial</label>
+            <input type="text" class="form-control" name="agentMiddleInitial" id="field_agentMiddleInitial"
+                    ng-model="vm.contractor.agentMiddleInitial"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentLastName">Agent Last Name</label>
+            <input type="text" class="form-control" name="agentLastName" id="field_agentLastName"
+                    ng-model="vm.contractor.agentLastName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentJobTitle">Agent Job Title</label>
+            <input type="text" class="form-control" name="agentJobTitle" id="field_agentJobTitle"
+                    ng-model="vm.contractor.agentJobTitle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.contractor.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentPhoneNumber">Agent Phone Number</label>
+            <input type="text" class="form-control" name="agentPhoneNumber" id="field_agentPhoneNumber"
+                    ng-model="vm.contractor.agentPhoneNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contractLicenseNumber">Contract License Number</label>
+            <input type="text" class="form-control" name="contractLicenseNumber" id="field_contractLicenseNumber"
+                    ng-model="vm.contractor.contractLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_occupationalLicenseNumber">Occupational License Number</label>
+            <input type="text" class="form-control" name="occupationalLicenseNumber" id="field_occupationalLicenseNumber"
+                    ng-model="vm.contractor.occupationalLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_masterPlumberLicenseNumber">Master Plumber License Number</label>
+            <input type="text" class="form-control" name="masterPlumberLicenseNumber" id="field_masterPlumberLicenseNumber"
+                    ng-model="vm.contractor.masterPlumberLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_hasGeneralLiabilityCoverage">Has General Liability Coverage</label>
+            <input type="checkbox" class="form-control" name="hasGeneralLiabilityCoverage" id="field_hasGeneralLiabilityCoverage"
+                    ng-model="vm.contractor.hasGeneralLiabilityCoverage"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_requirementsMet">Requirements Met</label>
+            <input type="checkbox" class="form-control" name="requirementsMet" id="field_requirementsMet"
+                    ng-model="vm.contractor.requirementsMet"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_carrier">Carrier</label>
+            <input type="text" class="form-control" name="carrier" id="field_carrier"
+                    ng-model="vm.contractor.carrier"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_policyNumber">Policy Number</label>
+            <input type="text" class="form-control" name="policyNumber" id="field_policyNumber"
+                    ng-model="vm.contractor.policyNumber"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" ng-model="vm.contractor.user" ng-options="user as user.id for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

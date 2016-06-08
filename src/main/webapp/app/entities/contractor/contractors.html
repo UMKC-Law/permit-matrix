@@ -1,0 +1,98 @@
+<div>
+    <h2>Contractors</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="contractor.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Contractor
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Business Name</span></th>
+                    <th><span>Business License Number</span></th>
+                    <th><span>Phone Number</span></th>
+                    <th><span>Street Address</span></th>
+                    <th><span>Zip Code</span></th>
+                    <th><span>City</span></th>
+                    <th><span>State</span></th>
+                    <th><span>Agent First Name</span></th>
+                    <th><span>Agent Middle Initial</span></th>
+                    <th><span>Agent Last Name</span></th>
+                    <th><span>Agent Job Title</span></th>
+                    <th><span>Email</span></th>
+                    <th><span>Agent Phone Number</span></th>
+                    <th><span>Contract License Number</span></th>
+                    <th><span>Occupational License Number</span></th>
+                    <th><span>Master Plumber License Number</span></th>
+                    <th><span>Has General Liability Coverage</span></th>
+                    <th><span>Requirements Met</span></th>
+                    <th><span>Carrier</span></th>
+                    <th><span>Policy Number</span></th>
+                    <th><span>User</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contractor in vm.contractors track by contractor.id">
+                    <td><a ui-sref="contractor-detail({id:contractor.id})">{{contractor.id}}</a></td>
+                    <td>{{contractor.businessName}}</td>
+                    <td>{{contractor.businessLicenseNumber}}</td>
+                    <td>{{contractor.phoneNumber}}</td>
+                    <td>{{contractor.streetAddress}}</td>
+                    <td>{{contractor.zipCode}}</td>
+                    <td>{{contractor.city}}</td>
+                    <td>{{contractor.state}}</td>
+                    <td>{{contractor.agentFirstName}}</td>
+                    <td>{{contractor.agentMiddleInitial}}</td>
+                    <td>{{contractor.agentLastName}}</td>
+                    <td>{{contractor.agentJobTitle}}</td>
+                    <td>{{contractor.email}}</td>
+                    <td>{{contractor.agentPhoneNumber}}</td>
+                    <td>{{contractor.contractLicenseNumber}}</td>
+                    <td>{{contractor.occupationalLicenseNumber}}</td>
+                    <td>{{contractor.masterPlumberLicenseNumber}}</td>
+                    <td>{{contractor.hasGeneralLiabilityCoverage}}</td>
+                    <td>{{contractor.requirementsMet}}</td>
+                    <td>{{contractor.carrier}}</td>
+                    <td>{{contractor.policyNumber}}</td>
+                    <td>
+                        {{contractor.user.id}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="contractor-detail({id:contractor.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="contractor.edit({id:contractor.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="contractor.delete({id:contractor.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

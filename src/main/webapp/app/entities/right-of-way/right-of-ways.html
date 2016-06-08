@@ -1,0 +1,68 @@
+<div>
+    <h2>Right Of Ways</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="right-of-way.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Right Of Way
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Right Of Way Type</span></th>
+                    <th><span>Closure Boundaries</span></th>
+                    <th><span>Proposed Detour</span></th>
+                    <th><span>Right Of Way Name</span></th>
+                    <th><span>Closure Duration Days</span></th>
+                    <th><span>Project</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rightOfWay in vm.rightOfWays track by rightOfWay.id">
+                    <td><a ui-sref="right-of-way-detail({id:rightOfWay.id})">{{rightOfWay.id}}</a></td>
+                    <td translate="{{'permitmeApp.RightOfWayType.' + rightOfWay.rightOfWayType}}">{{rightOfWay.rightOfWayType}}</td>
+                    <td>{{rightOfWay.closureBoundaries}}</td>
+                    <td>{{rightOfWay.proposedDetour}}</td>
+                    <td>{{rightOfWay.rightOfWayName}}</td>
+                    <td>{{rightOfWay.closureDurationDays}}</td>
+                    <td>
+                        <a ui-sref="project-detail({id:rightOfWay.project.id})">{{rightOfWay.project.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="right-of-way-detail({id:rightOfWay.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="right-of-way.edit({id:rightOfWay.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="right-of-way.delete({id:rightOfWay.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

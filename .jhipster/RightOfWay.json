@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "project",
+      "otherEntityName": "project",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "rightOfWayType",
+      "fieldType": "RightOfWayType",
+      "fieldValues": "STREET,SIDEWALK,DRIVE,STREET_LIGHT,STREET_SIGNAL,FIRE_HYDRANT,OTHER"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "closureBoundaries",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "proposedDetour",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "rightOfWayName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "closureDurationDays",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160605155611",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

@@ -1,0 +1,12 @@
+version: '2'
+services:
+    permitme-postgresql:
+        container_name: permitme-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/permitme/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=permitme
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

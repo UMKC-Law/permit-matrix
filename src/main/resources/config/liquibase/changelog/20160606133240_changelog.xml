@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="joelwells (generated)" id="1465237976033-1">
+        <addColumn tableName="project">
+            <column name="added_date" type="date"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-2">
+        <addColumn tableName="contractor">
+            <column name="agent_first_name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-3">
+        <addColumn tableName="contractor">
+            <column name="agent_job_title" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-4">
+        <addColumn tableName="contractor">
+            <column name="agent_last_name" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-5">
+        <addColumn tableName="contractor">
+            <column name="agent_middle_initial" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-6">
+        <addColumn tableName="contractor">
+            <column name="agent_phone_number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-7">
+        <addColumn tableName="project">
+            <column name="approved_date" type="date"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-8">
+        <addColumn tableName="contractor">
+            <column name="carrier" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-9">
+        <addColumn tableName="contractor">
+            <column name="contract_license_number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-10">
+        <addColumn tableName="contractor">
+            <column name="email" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-11">
+        <addColumn tableName="contractor">
+            <column name="has_general_liability_coverage" type="boolean"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-12">
+        <addColumn tableName="contractor">
+            <column name="master_plumber_license_number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-13">
+        <addColumn tableName="contractor">
+            <column name="occupational_license_number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-14">
+        <addColumn tableName="contractor">
+            <column name="policy_number" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-15">
+        <addColumn tableName="project">
+            <column name="project_status" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-16">
+        <addColumn tableName="contractor">
+            <column name="requirements_met" type="boolean"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-17">
+        <addColumn tableName="project">
+            <column name="submitted_date" type="date"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-21">
+        <dropUniqueConstraint constraintName="CONSTRAINT_4" tableName="CONTRACTOR"/>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-22">
+        <dropUniqueConstraint constraintName="CONSTRAINT_42" tableName="CONTRACTOR"/>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-23">
+        <dropUniqueConstraint constraintName="CONSTRAINT_421" tableName="CONTRACTOR"/>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-24">
+        <dropUniqueConstraint constraintName="CONSTRAINT_7" tableName="JHI_SOCIAL_USER_CONNECTION"/>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-25">
+        <dropUniqueConstraint constraintName="CONSTRAINT_71" tableName="JHI_SOCIAL_USER_CONNECTION"/>
+    </changeSet>
+    <changeSet author="joelwells (generated)" id="1465237976033-29">
+        <dropDefaultValue columnDataType="timestamp" columnName="created_date" tableName="jhi_user"/>
+    </changeSet>
+</databaseChangeLog>

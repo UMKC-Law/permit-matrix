@@ -1,0 +1,249 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "contractor",
+      "otherEntityName": "contractor",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "rightOfWay",
+      "otherEntityName": "rightOfWay",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "project"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "projectName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "projectDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "projectStatus",
+      "fieldType": "ProjectStatus",
+      "fieldValues": "INCOMPLETE,READY,SUBMITTED,APPROVED"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "addedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "submittedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "approvedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "isWorkOnExistingPlumbing",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "repairLocation",
+      "fieldType": "RepairLocation",
+      "fieldValues": "CURB_BOX,METER_TILE,YARD,INSIDE,OTHER"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "customRepairLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "meterLocation",
+      "fieldType": "MeterLocation",
+      "fieldValues": "INSIDE,OUTSIDE"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "isNewLine",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "plumbingType",
+      "fieldType": "PlumbingType",
+      "fieldValues": "WATER,TAP,SANITARY_SEWER,STORM_CONNECTION,OTHER"
+    },
+    {
+      "fieldId": 13,
+      "fieldName": "customPlumbingType",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 14,
+      "fieldName": "isConnectionAvailableFromProperty",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 15,
+      "fieldName": "isConnectionReadyForHookup",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 16,
+      "fieldName": "hasMasterSewerApprovalLetter",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 17,
+      "fieldName": "platSubdivision",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 18,
+      "fieldName": "hasAssessmentOrLien",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 19,
+      "fieldName": "isAssessmentOrLienPaid",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 20,
+      "fieldName": "workSiteType",
+      "fieldType": "WorkSiteType",
+      "fieldValues": "PUBLIC,PRIVATE"
+    },
+    {
+      "fieldId": 21,
+      "fieldName": "streetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 22,
+      "fieldName": "zipCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 23,
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 24,
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 25,
+      "fieldName": "includesExcavation",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 26,
+      "fieldName": "excavationDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 27,
+      "fieldName": "excavationPermitNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 28,
+      "fieldName": "isNewConstruction",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 29,
+      "fieldName": "newConstructionBuildingPermitNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 30,
+      "fieldName": "zoningDistrict",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 31,
+      "fieldName": "occGroup",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 32,
+      "fieldName": "constructionType",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 33,
+      "fieldName": "structuralClass",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 34,
+      "fieldName": "hasSitePlan",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 35,
+      "fieldName": "controlNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 36,
+      "fieldName": "totalFloors",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 37,
+      "fieldName": "grossBuildingArea",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 38,
+      "fieldName": "totalDwellingUnits",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 39,
+      "fieldName": "serviceLineLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 40,
+      "fieldName": "existingSewerMaterialDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 41,
+      "fieldName": "connectionType",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 42,
+      "fieldName": "serviceLineSize",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 43,
+      "fieldName": "sewerMainSize",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 44,
+      "fieldName": "usesRightOfWay",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160605155610",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

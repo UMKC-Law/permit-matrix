@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRightOfWayLabel">Create or edit a Right Of Way</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.rightOfWay.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rightOfWay.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_rightOfWayType">Right Of Way Type</label>
+            <select class="form-control" name="rightOfWayType" ng-model="vm.rightOfWay.rightOfWayType" id="field_rightOfWayType">
+                <option value="STREET">STREET</option>
+                <option value="SIDEWALK">SIDEWALK</option>
+                <option value="DRIVE">DRIVE</option>
+                <option value="STREET_LIGHT" translate="permitmeApp.RightOfWayType.STREET_LIGHT">STREET_LIGHT</option>
+                <option value="STREET_SIGNAL" translate="permitmeApp.RightOfWayType.STREET_SIGNAL">STREET_SIGNAL</option>
+                <option value="FIRE_HYDRANT" translate="permitmeApp.RightOfWayType.FIRE_HYDRANT">FIRE_HYDRANT</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_closureBoundaries">Closure Boundaries</label>
+            <input type="text" class="form-control" name="closureBoundaries" id="field_closureBoundaries"
+                    ng-model="vm.rightOfWay.closureBoundaries"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_proposedDetour">Proposed Detour</label>
+            <input type="text" class="form-control" name="proposedDetour" id="field_proposedDetour"
+                    ng-model="vm.rightOfWay.proposedDetour"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_rightOfWayName">Right Of Way Name</label>
+            <input type="text" class="form-control" name="rightOfWayName" id="field_rightOfWayName"
+                    ng-model="vm.rightOfWay.rightOfWayName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_closureDurationDays">Closure Duration Days</label>
+            <input type="number" class="form-control" name="closureDurationDays" id="field_closureDurationDays"
+                    ng-model="vm.rightOfWay.closureDurationDays"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_project">Project</label>
+            <select class="form-control" id="field_project" name="project" ng-model="vm.rightOfWay.project" ng-options="project as project.id for project in vm.projects track by project.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
