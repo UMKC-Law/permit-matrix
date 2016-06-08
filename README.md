@@ -1,5 +1,7 @@
 # permitme
 
+[![Stories in Ready](https://badge.waffle.io/UMKC-Law/permit-matrix.png?label=ready&title=Ready)](https://waffle.io/UMKC-Law/permit-matrix)
+
 Contractors in Kansas City find the permitting process cumbersome. It's difficult to understand which permits are required for a particular job and which departments need to be involved. The process of submitting permit applications can be time-consuming and often involves waiting in line, taking the contractors away from their core work. This project will explore how a mobile-first application might be able to streamline the process and reduce frustration. Key goals include:
 
 * Reducing duplicate data entry
