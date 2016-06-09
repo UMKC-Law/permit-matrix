@@ -11,5 +11,7 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public interface ProjectRepository extends JpaRepository<Project,Long> {
+	
+	List<Project> findByContractorId(Long id);
 
 }

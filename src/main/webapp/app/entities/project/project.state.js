@@ -48,11 +48,11 @@
         })
         .state('project.new', {
             parent: 'project',
-            url: '/new',
+            url: '/new/:contractorId',
             data: {
                 authorities: ['ROLE_USER']
             },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+            onEnter: ['$stateParams', '$state', '$uibModal', '$filter', function($stateParams, $state, $uibModal, $filter) {
                 $uibModal.open({
                     templateUrl: 'app/entities/project/project-dialog.html',
                     controller: 'ProjectDialogController',
@@ -64,8 +64,8 @@
                             return {
                                 projectName: null,
                                 projectDescription: null,
-                                projectStatus: null,
-                                addedDate: null,
+                                projectStatus: 'INCOMPLETE',
+                                addedDate: new Date(),
                                 submittedDate: null,
                                 approvedDate: null,
                                 isWorkOnExistingPlumbing: null,
@@ -106,7 +106,8 @@
                                 serviceLineSize: null,
                                 sewerMainSize: null,
                                 usesRightOfWay: null,
-                                id: null
+                                id: null,
+                                contractor: {id: $stateParams.contractorId}
                             };
                         }
                     }

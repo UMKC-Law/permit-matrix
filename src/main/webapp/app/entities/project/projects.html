@@ -1,10 +1,10 @@
 <div>
-    <h2>Projects</h2>
+    <h2>{{vm.contractor.businessName}} Project Dashboard</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="project.new" >
+                <button class="btn btn-primary" ui-sref="project.new({contractorId:vm.contractor.id})" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span >
                         Create new Project

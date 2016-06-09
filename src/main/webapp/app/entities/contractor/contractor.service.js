@@ -29,7 +29,7 @@
                     return data;
                 },
                 url: 'api/contractors/user'            	
-            }
+            },
             'update': { method:'PUT' }
         });
     }

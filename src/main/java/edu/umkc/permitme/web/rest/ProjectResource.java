@@ -1,12 +1,14 @@
 package edu.umkc.permitme.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
+import edu.umkc.permitme.domain.Contractor;
 import edu.umkc.permitme.domain.Project;
+import edu.umkc.permitme.repository.ContractorRepository;
 import edu.umkc.permitme.repository.ProjectRepository;
 import edu.umkc.permitme.web.rest.util.HeaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +31,8 @@ public class ProjectResource {
         
     @Inject
     private ProjectRepository projectRepository;
+    @Inject
+    private ContractorRepository contractorRepository;
     
     /**
      * POST  /projects : Create a new project.
@@ -46,6 +50,10 @@ public class ProjectResource {
         if (project.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("project", "idexists", "A new project cannot already have an ID")).body(null);
         }
+        
+        Contractor contractor = contractorRepository.findOne(project.getContractor().getId());
+        project.setContractor(contractor);
+        
         Project result = projectRepository.save(project);
         return ResponseEntity.created(new URI("/api/projects/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("project", result.getId().toString()))
@@ -109,6 +117,22 @@ public class ProjectResource {
                 result,
                 HttpStatus.OK))
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    /**
+     * GET  /projects/contractor/:id : get the projects for the 'id' contractor
+     *
+     * @param id the id of the contractor whose projects should be retrieved
+     * @return the ResponseEntity with status 200 (OK) and with body the project, or with status 404 (Not Found)
+     */
+    @RequestMapping(value = "/projects/contractor/{id}",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Project> getProjectsForContractor(@PathVariable Long id) {
+        log.debug("REST request to get Project : {}", id);
+        List<Project> projects = projectRepository.findByContractorId(id);
+        return projects;
     }
 
     /**

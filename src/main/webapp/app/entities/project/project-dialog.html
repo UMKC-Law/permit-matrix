@@ -26,45 +26,6 @@
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_projectStatus">Project Status</label>
-            <select class="form-control" name="projectStatus" ng-model="vm.project.projectStatus" id="field_projectStatus">
-                <option value="INCOMPLETE">INCOMPLETE</option>
-                <option value="READY">READY</option>
-                <option value="SUBMITTED">SUBMITTED</option>
-                <option value="APPROVED">APPROVED</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_addedDate">Added Date</label>
-                <div class="input-group">
-                    <input id="field_addedDate" type="text" class="form-control" name="addedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.addedDate" is-open="vm.datePickerOpenStatus.addedDate"
-                    />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('addedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_submittedDate">Submitted Date</label>
-                <div class="input-group">
-                    <input id="field_submittedDate" type="text" class="form-control" name="submittedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.submittedDate" is-open="vm.datePickerOpenStatus.submittedDate"
-                    />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('submittedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_approvedDate">Approved Date</label>
-                <div class="input-group">
-                    <input id="field_approvedDate" type="text" class="form-control" name="approvedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.project.approvedDate" is-open="vm.datePickerOpenStatus.approvedDate"
-                    />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('approvedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
             <label class="control-label" for="field_isWorkOnExistingPlumbing">Is Work On Existing Plumbing</label>
             <input type="checkbox" class="form-control" name="isWorkOnExistingPlumbing" id="field_isWorkOnExistingPlumbing"
                     ng-model="vm.project.isWorkOnExistingPlumbing"
@@ -303,12 +264,6 @@
                      />
         </div>
 
-        <div class="form-group">
-            <label for="field_contractor">Contractor</label>
-            <select class="form-control" id="field_contractor" name="contractor" ng-model="vm.project.contractor" ng-options="contractor as contractor.id for contractor in vm.contractors track by contractor.id">
-                <option value=""></option>
-            </select>
-        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

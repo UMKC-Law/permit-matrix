@@ -5,9 +5,9 @@
         .module('permitmeApp')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance'];
+    LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', 'Contractor', '$uibModalInstance'];
 
-    function LoginController ($rootScope, $state, $timeout, Auth, $uibModalInstance) {
+    function LoginController ($rootScope, $state, $timeout, Auth, Contractor, $uibModalInstance) {
         var vm = this;
 
         vm.authenticationError = false;
@@ -41,21 +41,26 @@
             }).then(function () {
                 vm.authenticationError = false;
                 $uibModalInstance.close();
-                if ($state.current.name === 'register' || $state.current.name === 'activate' ||
-                    $state.current.name === 'finishReset' || $state.current.name === 'requestReset' ||
-                    $state.current.name === 'home') {
-                    $state.go('contractor-profile');
-                }
 
                 $rootScope.$broadcast('authenticationSuccess');
+                
+                Contractor.getForUser(function(result) {
+                    if(result != null && result != undefined) {
+                    	$state.go('project');
+                    }
+                }, function(error) {
+                	$state.go('contractor-profile');
+                	console.log('Error encountered trying to retrieve a contractor the user: ');
+                	console.log(error)
+                });
 
                 // previousState was set in the authExpiredInterceptor before being redirected to login modal.
                 // since login is succesful, go to stored previousState and clear previousState
-                if (Auth.getPreviousState()) {
-                    var previousState = Auth.getPreviousState();
-                    Auth.resetPreviousState();
-                    $state.go(previousState.name, previousState.params);
-                }
+//                if (Auth.getPreviousState()) {
+//                    var previousState = Auth.getPreviousState();
+//                    Auth.resetPreviousState();
+//                    $state.go(previousState.name, previousState.params);
+//                }
             }).catch(function () {
                 vm.authenticationError = true;
             });
