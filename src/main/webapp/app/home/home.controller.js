@@ -26,6 +26,11 @@
                 vm.isAuthenticated = Principal.isAuthenticated;
             });
         }
+        
+        function login() {
+            LoginService.open();
+        }
+                
         function register () {
             $state.go('register');
         }
