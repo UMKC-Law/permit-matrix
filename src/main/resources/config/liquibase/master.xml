@@ -8,6 +8,7 @@
     <include file="classpath:config/liquibase/changelog/20160605155608_added_entity_Contractor.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160605155610_added_entity_Project.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160605155611_added_entity_RightOfWay.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160609105716_added_entity_CityLicenses.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20160605155610_added_entity_constraints_Project.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160605155611_added_entity_constraints_RightOfWay.xml" relativeToChangelogFile="false"/>

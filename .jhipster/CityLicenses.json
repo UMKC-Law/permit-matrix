@@ -1,0 +1,66 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "company_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "business_address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zip_code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "business_phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contractor_license_number",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "license_expiration_date",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "supervisor_last_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "supervisor_first_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "supervisor_middle_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "master_craftsman_certificate_number",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "certificate_expiration_date",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "business_license_expiration_date",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160609105716",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "city_licenses",
+    "pagination": "no"
+}

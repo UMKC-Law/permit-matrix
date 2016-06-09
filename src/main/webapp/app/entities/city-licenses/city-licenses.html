@@ -1,0 +1,82 @@
+<div>
+    <h2>City Licenses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="city-licenses.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new City Licenses
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.company_name">Company Name</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.business_address">Business Address</span></th>
+                    <th><span>City</span></th>
+                    <th><span>State</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.zip_code">Zip Code</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.business_phone">Business Phone</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.contractor_license_number">Contractor License Number</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.license_expiration_date">License Expiration Date</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.supervisor_last_name">Supervisor Last Name</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.supervisor_first_name">Supervisor First Name</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.supervisor_middle_name">Supervisor Middle Name</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.master_craftsman_certificate_number">Master Craftsman Certificate Number</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.certificate_expiration_date">Certificate Expiration Date</span></th>
+                    <th><span translate="permitmeApp.cityLicenses.business_license_expiration_date">Business License Expiration Date</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cityLicenses in vm.cityLicenses track by cityLicenses.id">
+                    <td><a ui-sref="city-licenses-detail({id:cityLicenses.id})">{{cityLicenses.id}}</a></td>
+                    <td>{{cityLicenses.company_name}}</td>
+                    <td>{{cityLicenses.business_address}}</td>
+                    <td>{{cityLicenses.city}}</td>
+                    <td>{{cityLicenses.state}}</td>
+                    <td>{{cityLicenses.zip_code}}</td>
+                    <td>{{cityLicenses.business_phone}}</td>
+                    <td>{{cityLicenses.contractor_license_number}}</td>
+                    <td>{{cityLicenses.license_expiration_date}}</td>
+                    <td>{{cityLicenses.supervisor_last_name}}</td>
+                    <td>{{cityLicenses.supervisor_first_name}}</td>
+                    <td>{{cityLicenses.supervisor_middle_name}}</td>
+                    <td>{{cityLicenses.master_craftsman_certificate_number}}</td>
+                    <td>{{cityLicenses.certificate_expiration_date}}</td>
+                    <td>{{cityLicenses.business_license_expiration_date}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="city-licenses-detail({id:cityLicenses.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="city-licenses.edit({id:cityLicenses.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="city-licenses.delete({id:cityLicenses.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

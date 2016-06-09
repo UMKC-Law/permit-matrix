@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCityLicensesLabel">Create or edit a City Licenses</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.cityLicenses.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.cityLicenses.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.company_name" for="field_company_name">Company Name</label>
+            <input type="text" class="form-control" name="company_name" id="field_company_name"
+                    ng-model="vm.cityLicenses.company_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.business_address" for="field_business_address">Business Address</label>
+            <input type="text" class="form-control" name="business_address" id="field_business_address"
+                    ng-model="vm.cityLicenses.business_address"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.cityLicenses.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.cityLicenses.state"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.zip_code" for="field_zip_code">Zip Code</label>
+            <input type="text" class="form-control" name="zip_code" id="field_zip_code"
+                    ng-model="vm.cityLicenses.zip_code"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.business_phone" for="field_business_phone">Business Phone</label>
+            <input type="text" class="form-control" name="business_phone" id="field_business_phone"
+                    ng-model="vm.cityLicenses.business_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.contractor_license_number" for="field_contractor_license_number">Contractor License Number</label>
+            <input type="text" class="form-control" name="contractor_license_number" id="field_contractor_license_number"
+                    ng-model="vm.cityLicenses.contractor_license_number"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.license_expiration_date" for="field_license_expiration_date">License Expiration Date</label>
+            <input type="text" class="form-control" name="license_expiration_date" id="field_license_expiration_date"
+                    ng-model="vm.cityLicenses.license_expiration_date"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.supervisor_last_name" for="field_supervisor_last_name">Supervisor Last Name</label>
+            <input type="text" class="form-control" name="supervisor_last_name" id="field_supervisor_last_name"
+                    ng-model="vm.cityLicenses.supervisor_last_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.supervisor_first_name" for="field_supervisor_first_name">Supervisor First Name</label>
+            <input type="text" class="form-control" name="supervisor_first_name" id="field_supervisor_first_name"
+                    ng-model="vm.cityLicenses.supervisor_first_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.supervisor_middle_name" for="field_supervisor_middle_name">Supervisor Middle Name</label>
+            <input type="text" class="form-control" name="supervisor_middle_name" id="field_supervisor_middle_name"
+                    ng-model="vm.cityLicenses.supervisor_middle_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.master_craftsman_certificate_number" for="field_master_craftsman_certificate_number">Master Craftsman Certificate Number</label>
+            <input type="text" class="form-control" name="master_craftsman_certificate_number" id="field_master_craftsman_certificate_number"
+                    ng-model="vm.cityLicenses.master_craftsman_certificate_number"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.certificate_expiration_date" for="field_certificate_expiration_date">Certificate Expiration Date</label>
+            <input type="text" class="form-control" name="certificate_expiration_date" id="field_certificate_expiration_date"
+                    ng-model="vm.cityLicenses.certificate_expiration_date"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="permitmeApp.cityLicenses.business_license_expiration_date" for="field_business_license_expiration_date">Business License Expiration Date</label>
+            <input type="text" class="form-control" name="business_license_expiration_date" id="field_business_license_expiration_date"
+                    ng-model="vm.cityLicenses.business_license_expiration_date"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
