@@ -1,19 +1,33 @@
 
 <form name="editForm" role="form" novalidate ng-submit="vm.save()">
 
-	<h2>Your Profile</h2>
+	<h2>Profile</h2>
     <div>
         <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label class="control-label" for="field_contractLicenseNumber">Contractor License Number</label>
+            <input type="text" class="form-control" name="contractLicenseNumber" id="field_contractLicenseNumber"
+                    ng-model="vm.contractor.contractLicenseNumber"
+                    placeholder="Number the city assigned to you as a licensed contractor"
+                     />
+        </div>
         <div class="form-group">
             <label class="control-label" for="field_businessName">Business Name</label>
             <input type="text" class="form-control" name="businessName" id="field_businessName"
                     ng-model="vm.contractor.businessName"
+                    placeholder="Name of your licensed contracting business"
                      />
         </div>
         <div class="form-group">
             <label class="control-label" for="field_businessLicenseNumber">Business License Number</label>
             <input type="text" class="form-control" name="businessLicenseNumber" id="field_businessLicenseNumber"
                     ng-model="vm.contractor.businessLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.contractor.email"
                      />
         </div>
         <div class="form-group">
@@ -29,12 +43,6 @@
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_zipCode">Zip Code</label>
-            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
-                    ng-model="vm.contractor.zipCode"
-                     />
-        </div>
-        <div class="form-group">
             <label class="control-label" for="field_city">City</label>
             <input type="text" class="form-control" name="city" id="field_city"
                     ng-model="vm.contractor.city"
@@ -47,45 +55,45 @@
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_agentFirstName">Agent First Name</label>
+            <label class="control-label" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.contractor.zipCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentFirstName">Qualified Supervisor First Name</label>
             <input type="text" class="form-control" name="agentFirstName" id="field_agentFirstName"
                     ng-model="vm.contractor.agentFirstName"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_agentMiddleInitial">Agent Middle Initial</label>
+            <label class="control-label" for="field_agentMiddleInitial">Qualified Supervisor Middle Initial</label>
             <input type="text" class="form-control" name="agentMiddleInitial" id="field_agentMiddleInitial"
                     ng-model="vm.contractor.agentMiddleInitial"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_agentLastName">Agent Last Name</label>
+            <label class="control-label" for="field_agentLastName">Qualified Supervisor Last Name</label>
             <input type="text" class="form-control" name="agentLastName" id="field_agentLastName"
                     ng-model="vm.contractor.agentLastName"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_agentJobTitle">Agent Job Title</label>
+            <label class="control-label" for="field_agentJobTitle">Qualified Supervisor Title</label>
             <input type="text" class="form-control" name="agentJobTitle" id="field_agentJobTitle"
                     ng-model="vm.contractor.agentJobTitle"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_email">Email</label>
-            <input type="text" class="form-control" name="email" id="field_email"
-                    ng-model="vm.contractor.email"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_agentPhoneNumber">Agent Phone Number</label>
+            <label class="control-label" for="field_agentPhoneNumber">Qualified Supervisor Phone Number</label>
             <input type="text" class="form-control" name="agentPhoneNumber" id="field_agentPhoneNumber"
                     ng-model="vm.contractor.agentPhoneNumber"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_contractLicenseNumber">Contract License Number</label>
-            <input type="text" class="form-control" name="contractLicenseNumber" id="field_contractLicenseNumber"
-                    ng-model="vm.contractor.contractLicenseNumber"
+            <label class="control-label" for="field_masterPlumberLicenseNumber">Qualified Supervisor License Number</label>
+            <input type="text" class="form-control" name="masterPlumberLicenseNumber" id="field_masterPlumberLicenseNumber"
+                    ng-model="vm.contractor.masterPlumberLicenseNumber"
                      />
         </div>
         <div class="form-group">
@@ -95,31 +103,19 @@
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_masterPlumberLicenseNumber">Master Plumber License Number</label>
-            <input type="text" class="form-control" name="masterPlumberLicenseNumber" id="field_masterPlumberLicenseNumber"
-                    ng-model="vm.contractor.masterPlumberLicenseNumber"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_hasGeneralLiabilityCoverage">Has General Liability Coverage</label>
+            <label class="control-label" for="field_hasGeneralLiabilityCoverage">Have you filed a certificate of public liability insurance?</label>
             <input type="checkbox" class="form-control" name="hasGeneralLiabilityCoverage" id="field_hasGeneralLiabilityCoverage"
                     ng-model="vm.contractor.hasGeneralLiabilityCoverage"
                      />
         </div>
-        <div class="form-group">
-            <label class="control-label" for="field_requirementsMet">Requirements Met</label>
-            <input type="checkbox" class="form-control" name="requirementsMet" id="field_requirementsMet"
-                    ng-model="vm.contractor.requirementsMet"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_carrier">Carrier</label>
+        <div class="form-group" ng-show="vm.contractor.hasGeneralLiabilityCoverage">
+            <label class="control-label" for="field_carrier">Insurance Carrier Name</label>
             <input type="text" class="form-control" name="carrier" id="field_carrier"
                     ng-model="vm.contractor.carrier"
                      />
         </div>
-        <div class="form-group">
-            <label class="control-label" for="field_policyNumber">Policy Number</label>
+        <div class="form-group" ng-show="vm.contractor.hasGeneralLiabilityCoverage">
+            <label class="control-label" for="field_policyNumber">Insurance Policy Number</label>
             <input type="text" class="form-control" name="policyNumber" id="field_policyNumber"
                     ng-model="vm.contractor.policyNumber"
                      />
