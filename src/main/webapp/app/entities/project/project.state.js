@@ -46,15 +46,15 @@
                 }]
             }
         })
-        .state('project.new', {
+        .state('project.wizard', {
             parent: 'project',
-            url: '/new/:contractorId',
+            url: '/wizard/:contractorId',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', '$filter', function($stateParams, $state, $uibModal, $filter) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/project/project-dialog.html',
+                    templateUrl: 'app/entities/project/project-wiz-shell.html',
                     controller: 'ProjectDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',

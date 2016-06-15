@@ -1,0 +1,32 @@
+
+        <div class="form-group">
+            <label class="control-label" for="field_isWorkOnExistingPlumbing">Will this work be on existing plumbing?</label>
+            <input type="checkbox" class="form-control" name="isWorkOnExistingPlumbing" id="field_isWorkOnExistingPlumbing"
+                    ng-model="vm.project.isWorkOnExistingPlumbing"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isWorkOnExistingPlumbing">
+            <label class="control-label" for="field_repairLocation">Repair Location</label>
+            <select class="form-control" name="repairLocation" ng-model="vm.project.repairLocation" id="field_repairLocation">
+                <option value="CURB_BOX" translate="permitmeApp.RepairLocation.CURB_BOX">CURB_BOX</option>
+                <option value="METER_TILE" translate="permitmeApp.RepairLocation.METER_TILE">METER_TILE</option>
+                <option value="YARD">YARD</option>
+                <option value="INSIDE">INSIDE</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group" ng-show="vm.project.isWorkOnExistingPlumbing && vm.project.repairLocation == 'OTHER'">
+            <label class="control-label" for="field_customRepairLocation">Custom Repair Location</label>
+            <input type="text" class="form-control" name="customRepairLocation" id="field_customRepairLocation"
+                    ng-model="vm.project.customRepairLocation"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isWorkOnExistingPlumbing && vm.project.repairLocation == 'METER_TILE'">
+            <label class="control-label" for="field_meterLocation">Meter Location</label>
+            <select class="form-control" name="meterLocation" ng-model="vm.project.meterLocation" id="field_meterLocation">
+                <option value="INSIDE">INSIDE</option>
+                <option value="OUTSIDE">OUTSIDE</option>
+            </select>
+        </div>
+
+    </div>

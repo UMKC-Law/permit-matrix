@@ -1,0 +1,71 @@
+
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label class="control-label" for="field_isNewConstruction">Is New Construction</label>
+            <input type="checkbox" class="form-control" name="isNewConstruction" id="field_isNewConstruction"
+                    ng-model="vm.project.isNewConstruction"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_newConstructionBuildingPermitNumber">New Construction Building Permit Number</label>
+            <input type="text" class="form-control" name="newConstructionBuildingPermitNumber" id="field_newConstructionBuildingPermitNumber"
+                    ng-model="vm.project.newConstructionBuildingPermitNumber"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_zoningDistrict">Zoning District</label>
+            <input type="text" class="form-control" name="zoningDistrict" id="field_zoningDistrict"
+                    ng-model="vm.project.zoningDistrict"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_occGroup">Occ Group</label>
+            <input type="text" class="form-control" name="occGroup" id="field_occGroup"
+                    ng-model="vm.project.occGroup"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_constructionType">Construction Type</label>
+            <input type="text" class="form-control" name="constructionType" id="field_constructionType"
+                    ng-model="vm.project.constructionType"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_structuralClass">Structural Class</label>
+            <input type="text" class="form-control" name="structuralClass" id="field_structuralClass"
+                    ng-model="vm.project.structuralClass"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_hasSitePlan">Has Site Plan</label>
+            <input type="checkbox" class="form-control" name="hasSitePlan" id="field_hasSitePlan"
+                    ng-model="vm.project.hasSitePlan"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_controlNumber">Control Number</label>
+            <input type="text" class="form-control" name="controlNumber" id="field_controlNumber"
+                    ng-model="vm.project.controlNumber"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_totalFloors">Total Floors</label>
+            <input type="number" class="form-control" name="totalFloors" id="field_totalFloors"
+                    ng-model="vm.project.totalFloors"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_grossBuildingArea">Gross Building Area</label>
+            <input type="number" class="form-control" name="grossBuildingArea" id="field_grossBuildingArea"
+                    ng-model="vm.project.grossBuildingArea"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewConstruction">
+            <label class="control-label" for="field_totalDwellingUnits">Total Dwelling Units</label>
+            <input type="number" class="form-control" name="totalDwellingUnits" id="field_totalDwellingUnits"
+                    ng-model="vm.project.totalDwellingUnits"
+                     />
+        </div>
+
+    </div>

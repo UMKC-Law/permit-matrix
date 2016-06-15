@@ -15,11 +15,23 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
-        vm.contractors = Contractor.query();
         vm.rightofways = RightOfWay.query();
+        vm.wizardStep = 0;
+        vm.wizardMax = 6;
+        vm.back = back;
+        vm.next = next;
+        vm.wizardTitleList = [
+            "General", 
+            "Repair of Existing Line",
+            "Install New Line",
+            "Assessments",
+            "Excavations",
+            "New Construction",
+            "Rights of Way"
+        ];
 
         $timeout(function (){
-            angular.element('.form-group:eq(1)>input').focus();
+            angular.element('.form-group:eq(0)>input').focus();
         });
 
         function clear () {
@@ -33,6 +45,19 @@
             } else {
                 Project.save(vm.project, onSaveSuccess, onSaveError);
             }
+        }
+        
+        function back() {
+        	if(vm.wizardStep > 0) {
+        		vm.wizardStep--;
+        	}
+        }
+        
+        function next() {
+        	//TODO - add validation
+        	if(vm.wizardStep <= vm.wizardMax) {
+        		vm.wizardStep++;
+        	}
         }
 
         function onSaveSuccess (result) {

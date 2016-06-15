@@ -1,0 +1,50 @@
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label class="control-label" for="field_isNewLine">Is New Line</label>
+            <input type="checkbox" class="form-control" name="isNewLine" id="field_isNewLine"
+                    ng-model="vm.project.isNewLine"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine">
+            <label class="control-label" for="field_plumbingType">Plumbing Type</label>
+            <select class="form-control" name="plumbingType" ng-model="vm.project.plumbingType" id="field_plumbingType">
+                <option value="WATER">WATER</option>
+                <option value="TAP">TAP</option>
+                <option value="SANITARY_SEWER" translate="permitmeApp.PlumbingType.SANITARY_SEWER">SANITARY_SEWER</option>
+                <option value="STORM_CONNECTION" translate="permitmeApp.PlumbingType.STORM_CONNECTION">STORM_CONNECTION</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine && vm.project.plumbingType == 'OTHER'">
+            <label class="control-label" for="field_customPlumbingType">Custom Plumbing Type</label>
+            <input type="text" class="form-control" name="customPlumbingType" id="field_customPlumbingType"
+                    ng-model="vm.project.customPlumbingType"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine">
+            <label class="control-label" for="field_isConnectionAvailableFromProperty">Is Connection Available From Property</label>
+            <input type="checkbox" class="form-control" name="isConnectionAvailableFromProperty" id="field_isConnectionAvailableFromProperty"
+                    ng-model="vm.project.isConnectionAvailableFromProperty"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine">
+            <label class="control-label" for="field_isConnectionReadyForHookup">Is Connection Ready For Hookup</label>
+            <input type="checkbox" class="form-control" name="isConnectionReadyForHookup" id="field_isConnectionReadyForHookup"
+                    ng-model="vm.project.isConnectionReadyForHookup"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine">
+            <label class="control-label" for="field_hasMasterSewerApprovalLetter">Has Master Sewer Approval Letter</label>
+            <input type="checkbox" class="form-control" name="hasMasterSewerApprovalLetter" id="field_hasMasterSewerApprovalLetter"
+                    ng-model="vm.project.hasMasterSewerApprovalLetter"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.isNewLine">
+            <label class="control-label" for="field_platSubdivision">Plat Subdivision</label>
+            <input type="text" class="form-control" name="platSubdivision" id="field_platSubdivision"
+                    ng-model="vm.project.platSubdivision"
+                     />
+        </div>
+
+    </div>

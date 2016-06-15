@@ -1,0 +1,24 @@
+
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group">
+            <label class="control-label" for="field_includesExcavation">Includes Excavation</label>
+            <input type="checkbox" class="form-control" name="includesExcavation" id="field_includesExcavation"
+                    ng-model="vm.project.includesExcavation"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.includesExcavation">
+            <label class="control-label" for="field_excavationDescription">Excavation Description</label>
+            <input type="text" class="form-control" name="excavationDescription" id="field_excavationDescription"
+                    ng-model="vm.project.excavationDescription"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.includesExcavation">
+            <label class="control-label" for="field_excavationPermitNumber">Excavation Permit Number</label>
+            <input type="text" class="form-control" name="excavationPermitNumber" id="field_excavationPermitNumber"
+                    ng-model="vm.project.excavationPermitNumber"
+                     />
+        </div>
+
+    </div>

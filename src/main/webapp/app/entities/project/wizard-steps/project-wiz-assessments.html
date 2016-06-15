@@ -1,0 +1,17 @@
+
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label class="control-label" for="field_hasAssessmentOrLien">Has Assessment Or Lien</label>
+            <input type="checkbox" class="form-control" name="hasAssessmentOrLien" id="field_hasAssessmentOrLien"
+                    ng-model="vm.project.hasAssessmentOrLien"
+                     />
+        </div>
+        <div class="form-group" ng-show="vm.project.hasAssessmentOrLien">
+            <label class="control-label" for="field_isAssessmentOrLienPaid">Is Assessment Or Lien Paid</label>
+            <input type="checkbox" class="form-control" name="isAssessmentOrLienPaid" id="field_isAssessmentOrLienPaid"
+                    ng-model="vm.project.isAssessmentOrLienPaid"
+                     />
+        </div>
+
+    </div>
