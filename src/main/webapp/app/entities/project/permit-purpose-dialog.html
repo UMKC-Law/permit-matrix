@@ -1,0 +1,15 @@
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.done()">&times;</button>
+        <h4 class="modal-title" id="permit-purpose-header">{{vm.permitName}}</h4>
+    </div>
+    <div class="modal-body">
+    	{{vm.permitPurpose}}
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.done()">
+            <span class="glyphicon glyphicon-ok"></span>&nbsp;<span>Got it</span>
+        </button>
+    </div>
+</form>

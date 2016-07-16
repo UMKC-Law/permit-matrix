@@ -16,6 +16,11 @@
             	url: 'api/projects/contractor/:contractorId',
             	isArray: true
             },
+            'getPermitTypesForProject': { 
+            	method: 'GET',
+            	url: 'api/projects/:id/permit-types',
+            	isArray: true
+            },
             'get': {
                 method: 'GET',
                 transformResponse: function (data) {

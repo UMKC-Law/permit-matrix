@@ -4,8 +4,10 @@ import com.codahale.metrics.annotation.Timed;
 
 import edu.umkc.permitme.domain.Contractor;
 import edu.umkc.permitme.domain.Project;
+import edu.umkc.permitme.domain.permit.PermitInformation;
 import edu.umkc.permitme.repository.ContractorRepository;
 import edu.umkc.permitme.repository.ProjectRepository;
+import edu.umkc.permitme.service.permit.PermitTypesService;
 import edu.umkc.permitme.web.rest.util.HeaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -133,6 +136,27 @@ public class ProjectResource {
         log.debug("REST request to get Project : {}", id);
         List<Project> projects = projectRepository.findByContractorId(id);
         return projects;
+    }
+
+    /**
+     * GET  /projects/:id : get the "id" project.
+     *
+     * @param id the id of the project to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the project, or with status 404 (Not Found)
+     */
+    @RequestMapping(value = "/projects/{id}/permit-types",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<PermitInformation> getProjectPermits(@PathVariable Long id) {
+        log.debug("REST request to get applicable permits for a project : {}", id);
+        Project project = projectRepository.findOne(id);
+        PermitTypesService service = new PermitTypesService();
+        List<PermitInformation> permits = new ArrayList<PermitInformation>();
+        if(null != project) {
+        	permits = service.determineApplicablePermitsForProject(project);
+        }
+        return permits;
     }
 
     /**

@@ -35,7 +35,7 @@
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/project/project-detail.html',
+                    templateUrl: 'app/entities/project/project-detail-permits.html',
                     controller: 'ProjectDetailController',
                     controllerAs: 'vm'
                 }
@@ -115,6 +115,30 @@
                     $state.go('project', null, { reload: true });
                 }, function() {
                     $state.go('project');
+                });
+            }]
+        })
+        .state('project-detail.permit-purpose', {
+            parent: 'project-detail',
+            url: '',
+            params: {
+            	permitName: null,
+            	permitPurpose: null
+            },
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/project/permit-purpose-dialog.html',
+                    controller: 'PermitPurposeDialogController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'sm'
+                }).result.then(function() {
+                    $state.go('project-detail', null, { reload: false });
+                }, function() {
+                    $state.go('^');
                 });
             }]
         })

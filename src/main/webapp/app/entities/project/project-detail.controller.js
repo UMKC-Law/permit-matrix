@@ -11,10 +11,19 @@
         var vm = this;
 
         vm.project = entity;
+        vm.permitTypes = [];
 
         var unsubscribe = $rootScope.$on('permitmeApp:projectUpdate', function(event, result) {
             vm.project = result;
         });
         $scope.$on('$destroy', unsubscribe);
+        loadPermitTypesForProject();
+        
+
+        function loadPermitTypesForProject() {
+            Project.getPermitTypesForProject({id: vm.project.id}, function(result) {
+                vm.permitTypes = result;
+            });
+        }
     }
 })();
