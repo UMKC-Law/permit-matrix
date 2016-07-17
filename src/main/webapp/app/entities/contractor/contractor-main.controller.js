@@ -18,7 +18,7 @@
         vm.getLicenseInformationForContractor = getLicenseInformationForContractor;
 
         $timeout(function (){
-            angular.element('.form-group:eq(1)>input').focus();
+            angular.element('.form-group:eq(0)>input').focus();
         });
         
         
