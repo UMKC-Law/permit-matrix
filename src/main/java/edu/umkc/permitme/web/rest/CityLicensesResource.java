@@ -112,6 +112,26 @@ public class CityLicensesResource {
     }
 
     /**
+     * GET  /city-licenses/:id : get the "id" cityLicenses.
+     *
+     * @param id the id of the cityLicenses to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the cityLicenses, or with status 404 (Not Found)
+     */
+    @RequestMapping(value = "/city-licenses/license-number/{licenseNumber}",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<CityLicenses> getCityLicenseForLicenseNumber(@PathVariable String licenseNumber) {
+        log.debug(licenseNumber);
+        CityLicenses cityLicenses = cityLicensesRepository.findOneByContractorLicenseNumber(licenseNumber);
+        return Optional.ofNullable(cityLicenses)
+            .map(result -> new ResponseEntity<>(
+                result,
+                HttpStatus.OK))
+            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    /**
      * DELETE  /city-licenses/:id : delete the "id" cityLicenses.
      *
      * @param id the id of the cityLicenses to delete

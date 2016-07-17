@@ -20,6 +20,16 @@
                     return data;
                 }
             },
+            'getCityLicenseForContractorLicense': {
+            	method: 'GET',
+                transformResponse: function (data) {
+                    if (data) {
+                        data = angular.fromJson(data);
+                    }
+                    return data;
+                },
+            	url: '/api/city-licenses/license-number/:licenseNumber'
+            },
             'update': { method:'PUT' }
         });
     }

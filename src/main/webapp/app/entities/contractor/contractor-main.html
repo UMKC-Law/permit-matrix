@@ -8,6 +8,7 @@
             <label class="control-label" for="field_contractLicenseNumber">Contractor License Number</label>
             <input type="text" class="form-control" name="contractLicenseNumber" id="field_contractLicenseNumber"
                     ng-model="vm.contractor.contractLicenseNumber"
+                    ng-blur="vm.getLicenseInformationForContractor($event)"
                     placeholder="Number the city assigned to you as a licensed contractor"
                      />
         </div>
@@ -16,24 +17,6 @@
             <input type="text" class="form-control" name="businessName" id="field_businessName"
                     ng-model="vm.contractor.businessName"
                     placeholder="Name of your licensed contracting business"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_businessLicenseNumber">Business License Number</label>
-            <input type="text" class="form-control" name="businessLicenseNumber" id="field_businessLicenseNumber"
-                    ng-model="vm.contractor.businessLicenseNumber"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_email">Email</label>
-            <input type="text" class="form-control" name="email" id="field_email"
-                    ng-model="vm.contractor.email"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_phoneNumber">Phone Number</label>
-            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
-                    ng-model="vm.contractor.phoneNumber"
                      />
         </div>
         <div class="form-group">
@@ -79,6 +62,30 @@
                      />
         </div>
         <div class="form-group">
+            <label class="control-label" for="field_masterPlumberLicenseNumber">Qualified Supervisor License Number</label>
+            <input type="text" class="form-control" name="masterPlumberLicenseNumber" id="field_masterPlumberLicenseNumber"
+                    ng-model="vm.contractor.masterPlumberLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_businessLicenseNumber">Business License Number</label>
+            <input type="text" class="form-control" name="businessLicenseNumber" id="field_businessLicenseNumber"
+                    ng-model="vm.contractor.businessLicenseNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.contractor.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="vm.contractor.phoneNumber"
+                     />
+        </div>
+        <div class="form-group">
             <label class="control-label" for="field_agentJobTitle">Qualified Supervisor Title</label>
             <input type="text" class="form-control" name="agentJobTitle" id="field_agentJobTitle"
                     ng-model="vm.contractor.agentJobTitle"
@@ -88,12 +95,6 @@
             <label class="control-label" for="field_agentPhoneNumber">Qualified Supervisor Phone Number</label>
             <input type="text" class="form-control" name="agentPhoneNumber" id="field_agentPhoneNumber"
                     ng-model="vm.contractor.agentPhoneNumber"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_masterPlumberLicenseNumber">Qualified Supervisor License Number</label>
-            <input type="text" class="form-control" name="masterPlumberLicenseNumber" id="field_masterPlumberLicenseNumber"
-                    ng-model="vm.contractor.masterPlumberLicenseNumber"
                      />
         </div>
         <div class="form-group">

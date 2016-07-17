@@ -12,4 +12,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface CityLicensesRepository extends JpaRepository<CityLicenses,Long> {
 
+	@Query("select cityLicense from CityLicenses cityLicense where cityLicense.contractor_license_number = ?1")
+	public CityLicenses findOneByContractorLicenseNumber(String contractorLicenseNumber);
+
 }
