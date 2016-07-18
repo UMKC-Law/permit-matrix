@@ -35,39 +35,39 @@
 						<fo:table-body font-size="80%" >
 							<fo:table-row height="20pt">
 								<fo:table-cell>
-									<fo:block >APPLICANT Name: <xsl:value-of select="excavation/applicantName"/></fo:block>
+									<fo:block >APPLICANT Name:  <xsl:value-of select="excavation/applicantName"/></fo:block>
 								</fo:table-cell>
 								<fo:table-cell>
-									<fo:block>EMAIL:<xsl:value-of select="excavation/applicantEmail"/></fo:block>
-								</fo:table-cell>
-							</fo:table-row>
-							<fo:table-row height="20pt">
-								<fo:table-cell>
-									<fo:block>FIRM RESPONSIBLE FOR EXCAVATION: <xsl:value-of select="excavation/responsibleFirm"/></fo:block>
+									<fo:block>EMAIL:  <xsl:value-of select="excavation/applicantEmail"/></fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 							<fo:table-row height="20pt">
 								<fo:table-cell>
-									<fo:block>BUSINESS ADDRESS:<xsl:value-of select="excavation/businessAddress"/></fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block>PHONE:<xsl:value-of select="excavation/phone"/></fo:block>
+									<fo:block>FIRM RESPONSIBLE FOR EXCAVATION:  <xsl:value-of select="excavation/responsibleFirm"/></fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 							<fo:table-row height="20pt">
 								<fo:table-cell>
-									<fo:block>CITY/STATE/ZIP: <xsl:value-of select="excavation/cityStateZip"/></fo:block>
+									<fo:block>BUSINESS ADDRESS:  <xsl:value-of select="excavation/businessAddress"/></fo:block>
 								</fo:table-cell>
 								<fo:table-cell>
-									<fo:block>FAX: <xsl:value-of select="excavation/fax"/></fo:block>
+									<fo:block>PHONE:  <xsl:value-of select="excavation/phone"/></fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 							<fo:table-row height="20pt">
 								<fo:table-cell>
-									<fo:block>JOB SUPERINTENDENT NAME: <xsl:value-of select="excavation/superintendent"/></fo:block>
+									<fo:block>CITY/STATE/ZIP:  <xsl:value-of select="excavation/cityStateZip"/></fo:block>
 								</fo:table-cell>
 								<fo:table-cell>
-									<fo:block>CONTACT PHONE: <xsl:value-of select="excavation/contactPhone"/></fo:block>
+									<fo:block>FAX:  <xsl:value-of select="excavation/fax"/></fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row height="20pt">
+								<fo:table-cell>
+									<fo:block>JOB SUPERINTENDENT NAME:  <xsl:value-of select="excavation/superintendent"/></fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block>CONTACT PHONE:  <xsl:value-of select="excavation/contactPhone"/></fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 						</fo:table-body>
@@ -78,18 +78,18 @@
 					<fo:block text-align="center" text-decoration="underline" font-weight="bold">LOCATION OF EXCAVATION
 					</fo:block>
 					<fo:block>&#xA0;</fo:block>
-					<fo:block font-size="80%" font-weight="bold">STREET ADDRESS NUMBER: <xsl:value-of select="excavation/jobAddress"/></fo:block>
+					<fo:block font-size="80%" font-weight="bold">STREET ADDRESS NUMBER:  <xsl:value-of select="excavation/jobAddress"/></fo:block>
 					<fo:block font-size="80%">SEE ATTACHMENT FOR SKETCH OF THE WORK AREA OR COPY OF THE PLANS</fo:block>
 					<fo:block>&#xA0;</fo:block>
-					<fo:block>&#xA0;</fo:block>
-					
-					<fo:block font-size="80%">DESCRIPTION OF WORK: <xsl:value-of select="excavation/workDescription"/></fo:block>
+					<fo:block font-size="80%">DESCRIPTION OF WORK:  <xsl:value-of select="excavation/workDescription"/></fo:block>
 
 					<fo:block>&#xA0;</fo:block>
 					<fo:block text-align="center" text-decoration="underline" font-weight="bold">SIZE OF DIG
 					[NUMBER OF HOLES, LENGTH, WIDTH AND DEPTH]
 					</fo:block>
-					<fo:block font-size="80%"><xsl:value-of select="excavation/sizeDescription"/></fo:block>
+					<fo:block>&#xA0;</fo:block>
+					<fo:block font-size="80%"><xsl:value-of select="excavation/excavationDescription"/></fo:block>
+					<fo:block>&#xA0;</fo:block>
 					<fo:block font-size="80%">BORE:<xsl:value-of select="excavation/bore"/></fo:block>
 					<fo:block font-size="80%">Will any portion of the excavation be in street pavement? <xsl:value-of select="excavation/streetPavementExcavation"/></fo:block>
 					<fo:block font-size="80%">Length and width of pavement cut:  </fo:block>

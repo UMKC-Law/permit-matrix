@@ -34,6 +34,14 @@ public class ExcavationPermit {
 	@XmlElement
 	private String bore;
 	@XmlElement
+	private String excavationDescription;
+	public String getExcavationDescription() {
+		return excavationDescription;
+	}
+	public void setExcavationDescription(String excavationDescription) {
+		this.excavationDescription = excavationDescription;
+	}
+	@XmlElement
 	private String streetPavementExcavation;
 	@XmlElement
 	private String length;
