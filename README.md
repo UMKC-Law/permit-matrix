@@ -8,7 +8,7 @@ Contractors in Kansas City find the permitting process cumbersome. It's difficul
 * Letting the application determine the required permits based on the contractor's description of the work
 * Producing the required permits in PDF format for submission either in person or via email
 * Making the process more transparent through plain English questions, contextual help and workflow aides that illustrate the process (e.g., showing which permits need to go to which department and why).
-* 
+
 ## Development Environment
 
 Application Stack - https://jhipster.github.io
