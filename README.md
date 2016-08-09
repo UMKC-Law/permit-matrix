@@ -8,3 +8,25 @@ Contractors in Kansas City find the permitting process cumbersome. It's difficul
 * Letting the application determine the required permits based on the contractor's description of the work
 * Producing the required permits in PDF format for submission either in person or via email
 * Making the process more transparent through plain English questions, contextual help and workflow aides that illustrate the process (e.g., showing which permits need to go to which department and why).
+* 
+## Development Environment
+
+Application Stack - https://jhipster.github.io
+
+These installtion notes are taken from https://jhipster.github.io/installation/ and modified accordingly. If you run into issues please refer to the official documentation and update the README.md here with any fixes that are needed.
+
+* Install Java 8 - http://www.oracle.com/technetwork/java/javase/downloads/index.html
+* Install Gradle - https://gradle.org/gradle-download/
+* Install Git - http://git-scm.com/
+* Install Node.js - http://nodejs.org
+  * Install Yeoman - `npm install -g yo`
+  * Install Bower - `npm install -g bower`
+  * Install Gulp - `npm install -g gulp`
+  * Install JHipster Generator - `npm install -g generator-jhipster`
+* Install our npm modules - `npm install`
+
+### Start the Development Server
+`gradle`
+
+If you want live reload capabilities with browser sync start the development server with `gulp` instead.
+  
