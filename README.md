@@ -13,7 +13,7 @@ Contractors in Kansas City find the permitting process cumbersome. It's difficul
 
 Application Stack - https://jhipster.github.io
 
-These installtion notes are taken from https://jhipster.github.io/installation/ and modified accordingly. If you run into issues please refer to the official documentation and update the README.md here with any fixes that are needed.
+These installation notes are taken from https://jhipster.github.io/installation/ and modified accordingly. If you run into issues please refer to the official documentation and update the README.md here with any fixes that are needed.
 
 * Install Java 8 - http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * Install Gradle - https://gradle.org/gradle-download/
